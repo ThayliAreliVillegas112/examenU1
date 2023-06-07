@@ -8,11 +8,15 @@ const tele = {
 function encender(){
     if(tele.encender){
         tele.encender = false;
-        console.log("lavadora apagada");
+        
         console.log(tele);
+        tele.volumen=3;
+        tele.canal=7;
+        tele.mutear= false;
+        console.log("televisón apagada");
     }else{
         tele.encender= true;
-        console.log("lavadora encendida");
+        console.log("televisón encendida");
         console.log(tele);
     }
 
@@ -36,7 +40,7 @@ function aumentarVolumen(){
     }
 
 }
-// for (var i = volumen; i <= 10; i++) {
+
 function bajarVolumen(){
     if(tele.encender == true){
         if(tele.volumen <=1){
@@ -89,12 +93,20 @@ function cambiarCanal2(){
 }
 function mutear(){
     if(tele.encender == true){
-        tele.mutear = false;
-        if(!tele.mutear){
+        
+        if(tele.mutear){
+            tele.mutear = false;
             tele.volumen=0;
+            console.log(tele);
+            console.log("televisón con sonido");
         }else{
-            tele
+            tele.mutear= true;
+            console.log("Tele muteada");
+            console.log(tele);
         }
+
+    }else{
+        console.log("primero encienda la tele");
     }
 
 }
