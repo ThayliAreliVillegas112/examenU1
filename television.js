@@ -102,6 +102,7 @@ function mutear(){
         }else{
             tele.mutear= true;
             console.log("Tele muteada");
+            console.log(JSON.stringify(tele,null,4));
             console.log(tele);
         }
 
